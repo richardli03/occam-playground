@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+
+struct ContentView : View {
+    // call the function defined in the other file.
+    @ObservedObject var compassHeading = CompassHeading()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text(String(compassHeading.degrees))
     }
 }
 
