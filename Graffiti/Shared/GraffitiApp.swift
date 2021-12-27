@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct GraffitiApp: App {
+struct SwiftUIARKitApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

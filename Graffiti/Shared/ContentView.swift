@@ -5,12 +5,24 @@
 //  Created by Richard Li on 12/27/21.
 //
 
+
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var arDelegate = ARDelegate()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            ARViewRepresentable(arDelegate: arDelegate)
+            VStack {
+                Spacer()
+                Text(arDelegate.message)
+                    .foregroundColor(Color.primary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, 20)
+                    .background(Color.secondary)
+            }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
