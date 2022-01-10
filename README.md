@@ -1,5 +1,15 @@
 # visualalignment
 
+
+12/27 Update:
+
+Simple steps to implement:
+1. Ask for permission and open the camera
+2. Putting a 3D object in the camera view
+3. Putting in a moving/jittering 3D object in camera view
+
+
+--------------------
 Project:
 AR Graffiti 
 1. We should be able to identify a flat surface
