@@ -9,7 +9,7 @@ import numpy as np
 # desired destination for files (second argument)
 
 directoryPath = "."
-jsonFiles = ["anchorData/06062022_richard_phone/snapTestOne.json"]
+jsonFiles = ["anchorData/06072022_richard_phone/snapTestThree.json"]
 
 # for file in os.listdir(directoryPath):
 #     if file[-5:] == '.json':
@@ -21,8 +21,8 @@ for filename in jsonFiles:
     cameraCoords = np.array(jsonData['CameraPositions'])
     plt.plot(anchorCoords[:,1], anchorCoords[:,0], '-')
     plt.plot(cameraCoords[:,1], cameraCoords[:,0], '-')
-    plt.legend(['Anchor Positions', 'Camera Positions'])
+    plt.legend(['Keypoint Positions', 'Camera Positions'])
     plt.axis('equal')
-    plt.title('Snap Test One')
-    plt.savefig('result_imgs/06062022_richard_phone/snapTestOne')
+    plt.title('Center Camera Left Anchors')
+    plt.savefig('result_imgs/06072022_richard_phone/snapTestThree')
     plt.show()
