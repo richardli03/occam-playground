@@ -9,7 +9,7 @@ import numpy as np
 # desired destination for files (second argument)
 
 directoryPath = "."
-jsonFiles = ["anchorData/06072022_richard_phone/snapTestThree.json"]
+jsonFiles = ["anchorData/06072022_richard_phone/snapTestFive.json"]
 
 # for file in os.listdir(directoryPath):
 #     if file[-5:] == '.json':
