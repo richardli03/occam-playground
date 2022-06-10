@@ -9,7 +9,7 @@ import numpy as np
 # desired destination for files (second argument)
 
 directoryPath = "."
-jsonFiles = ["anchor_data/STR_visualizing_routes/snapTestTen.json"]
+jsonFiles = ["anchor_data/STR_weights_data/weightsTestThree.json"]
 
 # for file in os.listdir(directoryPath):
 #     if file[-5:] == '.json':
@@ -23,6 +23,6 @@ for filename in jsonFiles:
     plt.plot(cameraCoords[:,1], cameraCoords[:,0], '-')
     plt.legend(['Keypoint Positions', 'Camera Positions'])
     plt.axis('equal')
-    plt.title('Left Camera Stairs and Right Anchor Ramp No Snap')
-    plt.savefig('result_imgs/STR_visualizing_routes/snapTestTen')
+    plt.title('Left Camera Stairs and Right Anchor Ramp Snap')
+    plt.savefig('result_imgs/STR_weights_data/weightsTestThree')
     plt.show()
