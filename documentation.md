@@ -4,7 +4,7 @@
 # Project Overview
 [ARGeoAnchors](https://developer.apple.com/documentation/arkit/argeoanchor) are a new technology released by Apple designed to help "identify a geographic location using latitude, longitude, and altitude data." It additionally utilizes "imagery" to localize the user. All this to say, it uses the phone's camera and its GPS to express the phone's location in a way that is far more accurate that most other systems.
 
-Unfortunately it's only active in a [few locations](https://developer.apple.com/documentation/arkit/argeotrackingconfiguration) -- thankfully, **Boston** is one of them, so we  were able to test a configuration of the Clew app that integrates ARGeoAnchors into its navigation instead of the currently used ARAnchors.
+Unfortunately it's only active in a [few locations](https://developer.apple.com/documentation/arkit/argeotrackingconfiguration) -- thankfully, Boston is one of them, so we  were able to test a configuration of the Clew app that integrates ARGeoAnchors into its navigation instead of the currently used ARAnchors.
 
 # Methodology
 Clew currently localizes the user by directing the user to put their phone against a wall at the same place they put their phone when recording the route. This aligns the phone's current position with the previous map, localizing the phone and enabling navigation to occur.
@@ -31,22 +31,40 @@ Since the user's motion didn't exactly resemble the path they were supposed to f
 
 Timeline:
 
+- 12/14/21: Initial kick-off meeting
+- 12/14/21 - 1/26/22: Onboarding to Swift
+- 2/9/22: Testing the test app at the New England College of Optometry + recording schemes for at-home test
+- 2/9 - 4/1: Intial work on integrating ARGeoAnchors into Clew Maps, creating barebones framework for further testing
+- 4/3/22: First test of Clew Maps (with ARGeoAnchors) on recorded schemes from the NECO
+- 4/3 - 4/23/22: Bugfixes in code, trying to create workflow and evaluate factors affecting accuracy
+- 4/23/22: Second test of Clew Maps in person at the NECO/
+- 4/23 - 5/13/22: Further bugfixes + deciding on SnapToRoute as our solution for misalignment
+- 5/28-6/1/22: Research begins, onboarding + learning about designing for accessibility
+- 6/1 - 6/10/22: Implementation of STR
+
 Limitations:
 1. ARGeoAnchors are only supported in a very small coverage area.
+2. STR still uses magic numbers to determine its weighting system (while this isn't necessarily bad, dynamic calculation of an optimal weighting system would be nice to have)
 
-Miro board:
-
-User interviews + user testing:
+User interviews + user testing || **TODO**:
 1. List of potential users
+- Users in ARGeoAnchor supported areas
+- Users who regularly traverse a mix of outdoor and indoor locations/users who have to enter unfamiliar buildings.
+
+
 2. List of failcases
+To be identified with further testing.
 
 
 Credits: 
 
+Special thanks to Paul Ruvolo for supporting us in our work through OCCaM labs. 
+
 Resources:
+- https://developer.apple.com/documentation/arkit/argeoanchor
+- Paul :P
 
 Further exploration:
 
-
-https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
-http://ais.informatik.uni-freiburg.de/teaching/ss11/robotics/slides/17-icp.pdf
+- https://igl.ethz.ch/projects/ARAP/svd_rot.pdf (A simple mathematical explanation of our STR algorithm)
+- http://ais.informatik.uni-freiburg.de/teaching/ss11/robotics/slides/17-icp.pdf (An explanation of what Iterative Closest Point is)

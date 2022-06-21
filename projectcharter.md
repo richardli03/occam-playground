@@ -25,6 +25,7 @@ Constraints:
 - 
 
 Time
+DONE
 
 
 Budget
@@ -36,8 +37,7 @@ Creating extremely effective outdoor to indoor navigation where ARGeoAnchors are
 
 
 Scope Out
-Outdoor to indoor navigation where ARGeoAnchors are no supported.
-
+Outdoor to indoor navigation where ARGeoAnchors are not supported.
 
 
 Milestones
