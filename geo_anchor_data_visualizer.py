@@ -8,14 +8,14 @@ import numpy as np
 # to such link based on which bucket data is stored in (first argument) and
 # desired destination for files (second argument)
 
-directoryPath = "."
-jsonFiles = ["anchor_data/STR_weights_data/weightsTestThree.json"]
+directoryPath = "anchor_data/NECO_TEST_061622"
+jsonFiles = []
 
-# for file in os.listdir(directoryPath):
-#     if file[-5:] == '.json':
-#         jsonFiles.append(file)
+for file in os.listdir(directoryPath):
+    if file[-5:] == '.json':
+        jsonFiles.append(file)
 for filename in jsonFiles:
-    file = open(filename)
+    file = open(f'{directoryPath}/{filename}')
     jsonData = json.load(file)
     anchorCoords = np.array(jsonData['GeoAnchors'])
     cameraCoords = np.array(jsonData['CameraPositions'])
@@ -23,6 +23,7 @@ for filename in jsonFiles:
     plt.plot(cameraCoords[:,1], cameraCoords[:,0], '-')
     plt.legend(['Keypoint Positions', 'Camera Positions'])
     plt.axis('equal')
-    plt.title('Left Camera Stairs and Right Anchor Ramp Snap')
-    plt.savefig('result_imgs/STR_weights_data/weightsTestThree')
+    # plt.title('Left Camera Stairs and Right Anchor Ramp Snap')
+    print(filename)
+    plt.savefig(f'result_imgs/NECO_test_061622/{filename.split(".")[0]}')
     plt.show()
