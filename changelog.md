@@ -64,3 +64,10 @@ The results are pretty nice!
 *this is with the closest 25% of points being weighted 1000x more and the farthest 25% of points being weighted 0.001x* 
 
 Note that the pictures we see are the final snap. The fact that the beginning of the route is off is an indicator that the weighting has worked and the algorithm is kind of "dismissing" the earlier points and valuing the closer points more. 
+
+# 6/16/22
+In-person testing at the NECO.
+
+Seems to work. At least, we were unable to identify any situations in which the STR algorithm failed to better the path.
+
+Note that we did find that STR crashed the application when attempting to record routes, so our solution was to simply reject the STR attempt if the app was currently recording. 
