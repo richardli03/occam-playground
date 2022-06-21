@@ -64,4 +64,3 @@ The results are pretty nice!
 *this is with the closest 25% of points being weighted 1000x more and the farthest 25% of points being weighted 0.001x* 
 
 Note that the pictures we see are the final snap. The fact that the beginning of the route is off is an indicator that the weighting has worked and the algorithm is kind of "dismissing" the earlier points and valuing the closer points more. 
-
