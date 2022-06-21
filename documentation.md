@@ -32,7 +32,7 @@ Since the user's motion didn't exactly resemble the path they were supposed to f
 Timeline:
 
 Limitations:
-1. ARGeoAnchors are only supported in a very little coverage area.
+1. ARGeoAnchors are only supported in a very small coverage area.
 
 Miro board:
 
