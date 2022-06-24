@@ -1,15 +1,12 @@
-# Visualizing ARGeoAnchor accuracy
+# OCCaM Playground
 *Authors: Richard Li and Ayush Chakraborty*
 
----
+A repository containing the work we've done for OCCaM Labs. Current projects include:
+
+1. ARGeoAnchors
+
 This repository contains the documentation + visualizations from our work integrating [ARGeoAnchors](https://developer.apple.com/documentation/arkit/argeoanchor) into the [Clew app](https://github.com/occamLab/Clew/tree/ClewgleMapsARGeoAnchor).
 
-`anchor_data` contains all of the raw json files we downloaded from Firebase
+2. Invisible-Map
 
-`result_imgs` contains all of the resulting visualizations
-
-`geo_anchor_data_visualizer` contains the python script used to generate these visualizations
-
-`changelog.md` details the changes we made in the main app and how they affected the visualizations
-
-`documentation.md` is a high level overview of our project, why we believe in its relevancy, and how it could affect accessibile navigation going forward.
+This repository contains our benchmarking work on the Invisible Map project, an attempt to map out a 3-D space and use the POSE of an iPhone to localize a person in their surrounding environment and help them navigate. 
