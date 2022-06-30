@@ -11,6 +11,12 @@ We're trying to expand the possibilities of the app by giving it outdoor-to-indo
 ---
 Our solution to that is "Snap-to-route," an algorithm that rotates the planned path onto the path you're currently walking, realigning the future directions with your path. There's a lot of complicated math that goes on behind it, but essentially we can adjust your instructions and move the anchors when we detect that Apple's localization is failing. 
 
+- benefits over GPS? - far more accurate, GPS is only accurate to 5 meters
+- lots of backlash against limited coverage area
+- uses google maps for outdoor navigation, main challenge is starting point (not always accurate) need to walk x feet for it to be accurate, also can't tell what direction to walk at first, need to use a compass
+- Integrate other apps into this: Apple is adding door detection
+- last 50 feet is what really makes the difference
+
 1. Explanation of snap-to-route ... Would the anchor moving mid-route confuse you? Do you need an explanation for why it moves? Information.
 
 ---
