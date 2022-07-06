@@ -8,7 +8,7 @@ import os
 import numpy
 
 RTABMAP_DATA_PATH = "test_data/poses7.txt"
-OUTPUTED_JSON_PATH = "gt_json/MAC_2_3_reversed_z.json"
+OUTPUTED_JSON_PATH = "gt_json/gt_MAC_2_3_fixedcoordinates.json"
 
 
 def check_data(new_data_entry):
@@ -50,7 +50,7 @@ def generate_correct_pose(pose):
     # print(pose)
     # the first number (X) needs to be flipped
     rtabmap_pose = numpy.array([pose[0],pose[1],pose[2]])
-    rotation_mat = numpy.array([[0,0,-1],[-1,0,0],[0,1,0]])
+    rotation_mat = numpy.array([[0,-1,0],[0,0,1],[1,0,0]])
     final_pose =  numpy.dot(rotation_mat,rtabmap_pose)
     for i in range(3):
         pose[i] = final_pose[i]
